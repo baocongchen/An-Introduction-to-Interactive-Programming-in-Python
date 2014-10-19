@@ -110,6 +110,15 @@ frame.set_draw_handler(draw)
 frame.start()
 
 
+#Quiz
+def findlast(size):
+    listofnumber = [0,1]
+    for i in range(size):
+        listofnumber.append(listofnumber[-1]+listofnumber[-2]) 
+    return listofnumber[-1]
+
+
+
 
 
 
