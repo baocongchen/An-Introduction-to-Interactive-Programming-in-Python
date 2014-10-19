@@ -117,6 +117,26 @@ def findlast(size):
         listofnumber.append(listofnumber[-1]+listofnumber[-2]) 
     return listofnumber[-1]
 
+#Quiz
+import simplegui
+
+source_center = (220, 100)
+source_size = (100, 100)
+frame_size = [200, 200]
+image_size = [1521, 1818]
+
+def draw(canvas):
+    canvas.draw_image(image, source_center,
+                      source_size,
+                      (frame_size[0] / 2, frame_size[1] / 2),
+                      tuple(frame_size))
+
+frame = simplegui.create_frame("test", frame_size[0], frame_size[1])
+frame.set_draw_handler(draw)
+image = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/alphatest.png")
+
+frame.start()
+
 
 
 
