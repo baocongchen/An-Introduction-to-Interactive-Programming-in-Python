@@ -272,4 +272,30 @@ new_game()
 frame.start()
 
 
+#Quiz: Bank account
+class BankAccount:
+    def __init__(self, initial_balance):
+        self.initial_balance = initial_balance
+        self.fee = 0
+        
+    def deposit(self, amount):
+        self.initial_balance += amount
+    def withdraw(self, amount):
+        if self.initial_balance - amount < 0:
+            self.initial_balance -= (5 + amount)
+            self.fee += 5
+        else:
+            self.initial_balance -= amount
+        """
+        Withdraws the amount from the account.  Each withdrawal resulting in a
+        negative balance also deducts a penalty fee of 5 dollars from the balance.
+        """
+        
+    def get_balance(self):
+        return self.initial_balance
+        """Returns the current balance in the account."""
+       
+    def get_fees(self):
+        """Returns the total fees ever deducted from the account."""
+        return self.fee
 
