@@ -309,3 +309,14 @@ while len(numbers) > 0:
         if num_divide%numbers[0]==0:
             numbers.remove(num_divide)
 print len(results)
+
+#Quiz 6b 8
+year = 1
+slow_wumpuses = 1000
+fast_wumpuses = 1
+while slow_wumpuses > fast_wumpuses:
+    slow_wumpuses += slow_wumpuses * 2 * 60/100
+    fast_wumpuses += fast_wumpuses * 2 * 70/100
+    year += 1
+print year - 1
+
