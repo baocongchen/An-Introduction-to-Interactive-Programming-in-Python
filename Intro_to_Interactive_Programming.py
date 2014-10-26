@@ -299,3 +299,13 @@ class BankAccount:
         """Returns the total fees ever deducted from the account."""
         return self.fee
 
+#Quiz 6b 7
+n = 1000
+numbers = range(2,n)
+results = []
+while len(numbers) > 0:
+    results.append(numbers[0])
+    for num_divide in numbers[::-1]:
+        if num_divide%numbers[0]==0:
+            numbers.remove(num_divide)
+print len(results)
